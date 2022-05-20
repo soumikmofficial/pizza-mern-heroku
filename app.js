@@ -2,10 +2,10 @@ require("express-async-errors");
 require("dotenv").config();
 
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const app = express();
 
-app.use(morgan("tiny"));
+// app.use(morgan("tiny"));
 const cookieParser = require("cookie-parser");
 // ....security packages........
 const cors = require("cors");
@@ -23,16 +23,16 @@ const reviewRouter = require("./routes/reviewRoutes");
 const dashboardRouter = require("./routes/dashboardRoutes");
 const errorHandlerMiddleware = require("./middlewares/error-handler");
 
-// app.use(
-//   rateLimiter({
-//     windowMs: 15 * 60 * 1000,
-//     max: 60,
-//   })
-// );
-// app.use(cors());
-// app.use(helmet());
-// app.use(xss());
-// app.use(mongoSanitize());
+app.use(
+  rateLimiter({
+    windowMs: 15 * 60 * 1000,
+    max: 60,
+  })
+);
+app.use(cors());
+app.use(helmet());
+app.use(xss());
+app.use(mongoSanitize());
 
 // .......body persers.......
 app.use(cookieParser(process.env.JWT_SECRET));
