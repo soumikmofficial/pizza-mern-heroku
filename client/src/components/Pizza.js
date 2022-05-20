@@ -25,7 +25,6 @@ function Pizza({ pizza }) {
     dispatch(addItemToCart(item));
     dispatch(setTotalPrice());
   };
-  console.log(pizza.image);
 
   return (
     <Container layout>
