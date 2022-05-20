@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Square+Peg&display=swap");
+
+:root {
+  --border-radius: 0.6rem;
+  --col-main: rgb(31, 31, 41);
+  --col-pizza-grey: rgb(41, 43, 54);
+  --col-modal-grey: rgba(41, 43, 54, 0.568);
+  --col-accent: #f54d6e;
+  --col-green: rgb(41, 216, 41);
+  --col-order-btn: rgb(211, 189, 93);
+  --col-failed: hsla(0, 62%, 85%, 0.575);
+  --col-blue-btn: rgb(74, 152, 241);
+  --col-trans-grey: rgba(51, 50, 50, 0.534);
+  --col-grey: rgb(51, 50, 50);
+
+  --font-cursive: "Square Peg", cursive;
+  --padding-nav-1: 0 3rem;
+  --padding-nav-2: 0 6rem;
+  --padding-input: 1rem 1.2rem;
+  --padding-input-mobile: 1.5rem 2rem;
+  --padding-dropdown: 1.5rem 2rem;
+  --shadow-navbar: rgba(37, 16, 16, 0.45) 0px 1px 25px 2px;
+  --shadow-filter: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  --shadow-pizza: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --shadow-checkout: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+  --shadow-form: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  --transition-25: all 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+select {
+  cursor: pointer;
+}
