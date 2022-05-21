@@ -30,14 +30,7 @@ app.use(
   })
 );
 app.use(cors());
-app.use(
-  helmet.contentSecurityPolicy({
-    useDefaults: true,
-    directives: {
-      "img-src": ["'self'", "https: data:"],
-    },
-  })
-);
+app.use(helmet({ contentSecurityPolicy: false }));
 app.use(xss());
 app.use(mongoSanitize());
 
