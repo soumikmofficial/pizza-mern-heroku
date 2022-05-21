@@ -35,10 +35,10 @@ app.use(
     useDefaults: true,
     directives: {
       "img-src": ["'self'", "https: data:"],
-      scriptSrc: [
+      "script-src": [
         "'self'",
         "'unsafe-inline'",
-        "'https://checkout.razorpay.com/v1/checkout.js'",
+        "https://checkout.razorpay.com/v1/checkout.js",
       ],
     },
   })
