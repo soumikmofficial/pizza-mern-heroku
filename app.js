@@ -33,12 +33,8 @@ app.use(cors());
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "default-src": ["'self'"],
-      "connect-src": ["'self'", "'unsafe-inline'"],
       "img-src": ["'self'", "data:"],
-      "style-src-elem": ["'self'", "data:"],
       "script-src": ["'unsafe-inline'", "'self'"],
-      "object-src": ["'none'"],
     },
   })
 );
