@@ -72,15 +72,18 @@ function Filter() {
 export default Filter;
 
 const Container = styled(motion.section)`
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  display: flex;
+  /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
   padding: 2rem;
   margin: 1.8rem auto;
   gap: 4rem;
+  width: 80%;
 
-  display: grid;
   box-shadow: var(--shadow-filter);
-  @media (min-width: 980px) {
-    width: 80%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 1rem;
   }
 `;
 
@@ -88,6 +91,7 @@ const SearchBox = styled.div`
   display: flex;
   align-items: center;
   gap: 1.5rem;
+  flex: 0.6;
 
   input {
     border: 0.4px solid grey;
@@ -98,6 +102,7 @@ const SearchBox = styled.div`
   }
 `;
 const Category = styled.div`
+  flex: 0.4;
   display: flex;
   align-items: center;
   gap: 1rem;

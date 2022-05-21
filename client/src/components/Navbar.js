@@ -24,11 +24,6 @@ function Navbar() {
       <RightBtns>
         {user && (
           <>
-            {user.role === "admin" && (
-              <Link to="/admin/dashboard" className="dashboard">
-                dashboard
-              </Link>
-            )}
             <Link to="/cart" className="cart">
               <BsFillCartDashFill className="cart-icon" /> <span>{items}</span>
             </Link>

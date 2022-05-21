@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { removeUser } from "../features/auth/userSlice";
 import { resetCart } from "../features/cart/cartSlice";
 
@@ -25,20 +25,25 @@ const DropdownNav = () => {
       </DropdownBtn>
       <Pointer className={isActive ? "active" : ""} />
       <DropdownContent className={isActive ? "active" : ""}>
-        <NavLink
+        {user.role === "admin" && (
+          <Link to="/admin/dashboard" className="dropdown-item">
+            dashboard
+          </Link>
+        )}
+        <Link
           to="orders"
           className="dropdown-item"
           onClick={() => setIsActive(false)}
         >
           Orders
-        </NavLink>
-        <NavLink
+        </Link>
+        <Link
           to="/change-password"
           className="dropdown-item"
           onClick={() => setIsActive(false)}
         >
           Change Password
-        </NavLink>
+        </Link>
         <LogoutBtn className="dropdown-item" onClick={handleLogout}>
           logout
         </LogoutBtn>
@@ -90,7 +95,7 @@ const DropdownContent = styled.div`
   z-index: 100;
 
   &.active {
-    max-height: 15rem;
+    max-height: 18rem;
     padding: var(--padding-dropdown);
   }
 
