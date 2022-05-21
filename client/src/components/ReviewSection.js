@@ -40,9 +40,6 @@ const Container = styled(motion.div)`
   overflow: scroll;
   height: 20rem;
   position: relative;
-  @media (max-width: 768px) {
-    height: 100%;
-  }
 
   .no-reviews,
   .loading {

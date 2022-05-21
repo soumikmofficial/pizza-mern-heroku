@@ -98,6 +98,7 @@ const Wrapper = styled.div`
 `;
 
 const Brand = styled.h1`
+  position: relative;
   letter-spacing: 0.5rem;
   font-family: var(--font-cursive);
   font-size: 9rem;
@@ -108,6 +109,18 @@ const Brand = styled.h1`
   }
   .z-span {
     display: inline-block;
+  }
+
+  &:after {
+    content: "by Soumik";
+    position: absolute;
+    font-size: 1rem;
+    bottom: 15%;
+    left: 0;
+    color: grey;
+    opacity: 0.8;
+    letter-spacing: 0.4rem;
+    font-family: "PT Sans", sans-serif;
   }
 `;
 

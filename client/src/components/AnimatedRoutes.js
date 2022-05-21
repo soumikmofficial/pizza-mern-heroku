@@ -1,7 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 import {
   HomePage,
@@ -23,7 +22,6 @@ import {
   About,
   NavLayer,
   ProtectedRoutes,
-  CartAlert,
   AdminRoutes,
 } from ".";
 

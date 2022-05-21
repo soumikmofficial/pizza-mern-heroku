@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { setFilteredPizzas } from "../features/pizzas/pizzaSlice";
-import { filter } from "../utils/filterPizzas";
 import { CloseIcon } from "./About";
 import { motion } from "framer-motion";
 
@@ -25,17 +24,11 @@ function Filter() {
   const [category, setCategory] = useState("all");
   const dispatch = useDispatch();
 
-  const handleFilter = () => {
-    const items = filter(input, category, pizzas);
-    dispatch(setFilteredPizzas(items));
-  };
-
   useEffect(() => {
-    // handleFilter();
     if (pizzas.length >= 1) {
       dispatch(setFilteredPizzas({ input, category }));
     }
-  }, [category, input, pizzas]);
+  }, [category, input, pizzas, dispatch]);
 
   return (
     <Container animate="visible" initial="hidden" variants={containerVariants}>

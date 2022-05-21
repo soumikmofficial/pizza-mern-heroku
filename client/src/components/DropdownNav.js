@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { removeUser } from "../features/auth/userSlice";
 import { resetCart } from "../features/cart/cartSlice";
 
 const DropdownNav = () => {
-  const navigate = useNavigate();
   const [isActive, setIsActive] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);

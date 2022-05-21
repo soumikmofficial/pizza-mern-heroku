@@ -18,8 +18,8 @@ function Navbar() {
 
   return (
     <Nav className="navbar">
-      <Logo to="/menu" whileHover={{ scale: 1.3 }}>
-        P<span>i</span>zzy
+      <Logo to="/menu">
+        P<span className="i-span">i</span>zzy
       </Logo>
       <RightBtns>
         {user && (
@@ -66,13 +66,13 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled(Link)`
+  position: relative;
   color: var(--col-accent);
   cursor: pointer;
   font-size: 3.5rem;
   font-weight: bold;
   font-family: var(--font-cursive);
   letter-spacing: 0.5rem;
-
   span {
     color: white;
   }
