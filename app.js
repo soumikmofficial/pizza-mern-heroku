@@ -40,6 +40,7 @@ app.use(
         "'unsafe-inline'",
         "https://checkout.razorpay.com/v1/checkout.js",
       ],
+      "frame-src": ["'self'", "https://api.razorpay.com/"],
     },
   })
 );

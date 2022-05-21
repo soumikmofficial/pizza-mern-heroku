@@ -93,7 +93,6 @@ const CartPage = () => {
           )}
           <AnimatePresence>
             {cartItems.map((pizza, index) => {
-              console.log(pizza);
               return (
                 <SingleItem
                   key={pizza.id}

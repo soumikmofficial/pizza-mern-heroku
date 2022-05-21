@@ -36,7 +36,6 @@ const Checkout = () => {
     }
 
     const result = await getOrder({ amount: total * 100 });
-    console.log(result);
 
     if (!result) {
       alert("no order could be created");
