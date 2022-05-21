@@ -100,7 +100,7 @@ const LoginPage = () => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.95, background: "grey" }}
         >
-          {isLoading ? "loading..." : "sbumit"}
+          {isLoading ? "loading..." : "submit"}
         </motion.button>
         <Else>
           <small>Do not have an account?</small>
