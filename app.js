@@ -30,7 +30,15 @@ app.use(
   })
 );
 app.use(cors());
-app.use(helmet({ contentSecurityPolicy: false }));
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"],
+      "script-src": ["'self'"],
+    },
+  })
+);
 app.use(xss());
 app.use(mongoSanitize());
 
