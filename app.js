@@ -32,9 +32,14 @@ app.use(
 app.use(cors());
 app.use(
   helmet.contentSecurityPolicy({
+    useDefaults: true,
     directives: {
-      "img-src": ["'self'", "data:"],
-      "script-src": ["'unsafe-inline'", "'self'"],
+      "img-src": ["'self'", "https: data:"],
+      scriptSrc: [
+        "'self'",
+        "'unsafe-inline'",
+        "'https://checkout.razorpay.com/v1/checkout.js'",
+      ],
     },
   })
 );
