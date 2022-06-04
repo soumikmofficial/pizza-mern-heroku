@@ -20,7 +20,7 @@ const register = async (req, res) => {
   const { name, email, password } = req.body;
 
   // ? checks if all required input are there
-  if ((!name, !email, !password))
+  if (!name || !email || !password)
     throw new BadRequestError(`one or more inputs are missing`);
   // ? user alredy exists ?
   const isExistingUser = await User.findOne({ email });

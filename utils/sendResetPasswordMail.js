@@ -1,7 +1,6 @@
 const sendMail = require("./sendMail");
 
 const sendResetPasswordMail = async ({ name, email, passwordResetToken }) => {
-  console.log(email);
   const origin = process.env.ORIGIN;
   const subject = `Reset Password`;
   const link = `${origin}/auth/reset-password?token=${passwordResetToken}&email=${email}`;
